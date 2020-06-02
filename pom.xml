@@ -1,0 +1,58 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.animefest</groupId>
+  <artifactId>kikobot</artifactId>
+  <version>1.0.0</version>
+
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
+	</parent>
+
+  <properties>
+    <start-class>org.animefest.kikobot.KikoBot</start-class>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>${start-class}</mainClass>
+          <layout>JAR</layout>
+      </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/net.dv8tion/JDA -->
+    <dependency>
+        <groupId>net.dv8tion</groupId>
+        <artifactId>JDA</artifactId>
+        <version>3.8.0_427</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.kie/kie-api -->
+    <!-- <dependency>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-api</artifactId>
+        <version>7.11.0.Final</version>
+    </dependency> -->
+    <!-- https://mvnrepository.com/artifact/org.apache.opennlp/opennlp-tools -->
+    <dependency>
+        <groupId>org.apache.opennlp</groupId>
+        <artifactId>opennlp-tools</artifactId>
+        <version>1.9.0</version>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>jcenter</id>
+      <url>https://jcenter.bintray.com/</url>
+    </repository>
+  </repositories>
+
+</project>
